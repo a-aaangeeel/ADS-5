@@ -37,7 +37,7 @@ std::string infx2pstfx(std::string inf) {
         }
         if (c == '*' || c == '/' || c == '+' || c == '-') {
             postfix << ' ';
-            while (!stack.isEmpty() && precedence(stack.get()) >= precedence(c)) {
+         while (!stack.isEmpty() && precedence(stack.get()) >= precedence(c)) {
                 postfix << stack.get() << ' ';
                 stack.pop();
             }
