@@ -63,8 +63,7 @@ int eval(std::string post) {
     while (expression >> token) {
         if (isdigit(token[0])) {
             stack.push(std::stoi(token));
-        } else if (token[0] == '*' || token[0] == '/' 
-                    || token[0] == '+' || token[0] == '-') {
+} else if (token[0]=='*'||token[0]=='/'||token[0]=='+'||token[0]=='-') {
             operand2 = stack.get();
             stack.pop();
             operand1 = stack.get();
